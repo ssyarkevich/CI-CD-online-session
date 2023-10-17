@@ -16,7 +16,7 @@ pipeline {
         stage('Publish') {
           steps {
             script {
-              docker.withRegistry('','dockerhub'){
+              docker.withRegistry('','docker-hub'){
                 docker.image("${registry}:latest").push('latest')
               }
             }
