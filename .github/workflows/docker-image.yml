@@ -28,7 +28,7 @@ jobs:
         pylint $(git ls-files '*.py')
 
   build:
-
+    needs: pylint
     runs-on: ubuntu-latest
 
     steps:
